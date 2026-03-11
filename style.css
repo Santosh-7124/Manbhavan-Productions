@@ -11,8 +11,11 @@ html {
 }
 
 #root {
-  background: var(--White, #fff);
   position: relative;
+}
+
+body {
+  transition: background-color 0.4s ease;
 }
 
 /* Utilities */
@@ -206,6 +209,23 @@ html {
   }
 }
 
+.home-brands {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+  padding: 80px 0px 80px 160px;
+  background: var(--BG, #f4f0e9);
+}
+
+.home-brands .template-heading {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .template-heading {
   width: 100%;
   display: flex;
@@ -357,7 +377,6 @@ html {
   flex-direction: column;
   gap: 80px;
   padding: 80px 0px;
-  background: var(--BG, #f4f0e9);
 }
 
 .home-testimony .template-heading {

@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Comma from "../../assets/Home/Testimony/Comma.png";
 
 function Testimony() {
+  const testimonyRef = useRef(null);
+
+  useEffect(() => {
+    const section = testimonyRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          document.body.style.backgroundColor = "#f4f0e9";
+        } else {
+          document.body.style.backgroundColor = "#fff";
+        }
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+
+    if (section) observer.observe(section);
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
   return (
-    <section className="home-testimony">
+    <section className="home-testimony" ref={testimonyRef}>
       <div className="template-heading">
         <h3 className="h3-semibold">
           Client{" "}
