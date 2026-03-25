@@ -7,6 +7,8 @@ import Testimony from "./Home/Testimony";
 import Brands from "./Home/Brands";
 import Reality from "./Home/Reality";
 import Parle from "./Home/Parle";
+import Holi from "./Home/Holi";
+import Diwali from "./Home/Diwali";
 
 function Home() {
   return (
@@ -16,6 +18,8 @@ function Home() {
       <Reality />
       <Parle />
       <Brands />
+      <Holi />
+      <Diwali />
       <Services />
       <Testimony />
       <Contact />
