@@ -9,6 +9,8 @@ import Reality from "./Home/Reality";
 import Parle from "./Home/Parle";
 import Holi from "./Home/Holi";
 import Diwali from "./Home/Diwali";
+import Impact from "./Home/Impact";
+import BTS from "./Home/BTS";
 
 function Home() {
   return (
@@ -20,7 +22,9 @@ function Home() {
       <Brands />
       <Holi />
       <Diwali />
+      <Impact />
       <Services />
+      <BTS />
       <Testimony />
       <Contact />
     </>

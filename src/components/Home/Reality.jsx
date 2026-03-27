@@ -31,9 +31,8 @@ function Reality() {
     <section className="home-reality" ref={testimonyRef}>
       <div className="template-heading">
         <h3 className="h3-semibold">
-          A Collection of Works Crafted for
-          <br />
-          <span>Brands.</span>
+          We Create Stories <br />
+          into <span>Reality.</span>
         </h3>
       </div>
       <div className="home-reality-container">

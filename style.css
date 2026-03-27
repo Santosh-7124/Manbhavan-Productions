@@ -32,11 +32,11 @@ body {
 
 .h3-semibold {
   font-family: "Plus Jakarta Sans";
-  font-size: 48px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: -1.92px;
+  letter-spacing: -2.24px;
 }
 
 .h5-semibold {
@@ -439,6 +439,195 @@ body {
   letter-spacing: -0.32px;
 }
 
+.home-impact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 64px;
+  padding: 80px 160px;
+}
+
+.home-impact .template-heading p {
+  width: 400px;
+}
+
+.home-impact-container {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.home-impact-container-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  overflow: hidden;
+  padding: 0px 20px;
+}
+
+.home-impact-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.home-impact-left-set {
+  display: flex;
+  width: 90%;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0.6;
+  background: var(--White, #fff);
+  transition: all 0.3s;
+}
+
+.home-impact-left-set.home-impact-left-set-active {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.home-impact-left-set-icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--Deep-Teal-Green, #0f4d4c);
+  flex-shrink: 0;
+}
+
+.home-impact-left-set-icon img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.home-impact-left-set p {
+  color: var(--color-black-Primary, #1b1b1b);
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.home-impact-left-set.home-impact-left-set-active p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.home-impact-container-right {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-impact-container-right::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0px;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  background: linear-gradient(-90deg, transparent 10%, #f4f0e9 90%);
+  z-index: 1;
+  filter: blur(5px);
+}
+
+.home-impact-container-right::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 0px;
+  top: 50%;
+  transform: translate(10%, -50%);
+  background: linear-gradient(90deg, transparent 10%, #f4f0e9 90%);
+  z-index: 1;
+  filter: blur(5px);
+}
+
+.home-impact-right-bottom {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 10%);
+  background: linear-gradient(180deg, transparent 10%, #f4f0e9 60%);
+  z-index: 1;
+  filter: blur(5px);
+}
+
+.home-impact-right {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-impact-right-marquee {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.home-impact-right-marquee img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-impact-text {
+  position: absolute;
+  bottom: 0;
+  color: #6b6b6b;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.28px;
+  z-index: 10;
+}
+
+.home-impact-text span {
+  color: var(--color-black-Primary, #1b1b1b);
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.28px;
+}
+
+.home-impact-text svg {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1/1;
+  transform: translateY(2px);
+}
+
 .home-brands {
   width: 100%;
   display: flex;
@@ -572,6 +761,7 @@ body {
 
 .template-heading h3 span {
   color: var(--Vermilion-Red, #c3262b);
+  font-weight: 700;
 }
 
 .template-heading svg {
@@ -700,6 +890,20 @@ body {
   color: var(--color-black-300, #606060);
 }
 
+.home-bts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 64px;
+  padding: 80px 0px;
+}
+
+.home-bts .template-heading {
+  padding: 0px 160px;
+}
+
 .home-testimony {
   width: 100%;
   display: flex;
@@ -785,15 +989,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 160px 180px 160px;
+  padding: 80px 160px 250px 160px;
   flex-direction: column;
-  gap: 48px;
+  gap: 64px;
   background: linear-gradient(270deg, #5d1215 0%, #c3262b 100%);
   position: relative;
 }
 
 .home-contact-heading {
-  width: 480px;
+  width: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -822,6 +1026,75 @@ body {
   position: absolute;
   object-fit: cover;
   bottom: -96px;
+}
+
+.home-contact-form {
+  display: flex;
+  width: 621px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.home-contact-form button {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.home-contact-form-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.home-contact-form-inputs-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  align-self: stretch;
+}
+
+.home-contact-form-inputs input,
+.home-contact-form-inputs textarea {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  padding: 10px 16px;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(27, 27, 27, 0.4);
+  backdrop-filter: blur(20px);
+  color: var(--color-black-200, #929292);
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.36px;
+}
+
+.home-contact-form-inputs textarea {
+  resize: none;
+  height: 200px;
+}
+
+.home-contact-form input:not(:placeholder-shown),
+.home-contact-form textarea:not(:placeholder-shown) {
+  color: #fff;
 }
 
 /* Footer */
