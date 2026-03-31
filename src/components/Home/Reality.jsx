@@ -28,22 +28,25 @@ function Reality() {
   }, []);
 
   return (
-    <section className="home-reality" ref={testimonyRef}>
-      <div className="template-heading">
-        <h3 className="h3-semibold">
-          We Create Stories <br />
-          into <span>Reality.</span>
-        </h3>
-      </div>
-      <div className="home-reality-container">
-        <img src={RealityImage} />
-        <p className="xl-regular">
-          Manbhavan Productions is a creative production house working across
-          advertising, films, music videos, and branded content, focused on
-          crafting visuals that feel human, emotionally resonant, and
-          thoughtfully produced. Guided by clarity of storytelling and attention
-          to detail, we collaborate with brands, agencies and creators.
-        </p>
+    <section className="home-reality-wrapper" ref={testimonyRef}>
+      <div className="home-reality">
+        <div className="template-heading">
+          <h3 className="h3-semibold">
+            We Create Stories <br />
+            into <span>Reality.</span>
+          </h3>
+        </div>
+        <div className="home-reality-container">
+          <img src={RealityImage} />
+          <p className="xl-regular">
+            Manbhavan Productions is a creative production house working across
+            advertising, films, music videos, and branded content, focused on
+            crafting visuals that feel human, emotionally resonant, and
+            thoughtfully produced. Guided by clarity of storytelling and
+            attention to detail, we collaborate with brands, agencies and
+            creators.
+          </p>
+        </div>
       </div>
     </section>
   );

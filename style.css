@@ -252,15 +252,6 @@ header nav a:hover {
   overflow: hidden;
 }
 
-.home-banner-background {
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  object-fit: cover;
-}
-
 .home-banner::before {
   content: "";
   position: absolute;
@@ -294,7 +285,7 @@ header nav a:hover {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .home-banner-heading-text {
@@ -350,11 +341,48 @@ header nav a:hover {
   color: #fff;
 }
 
-.home-banner-container {
+.home-banner-background {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 12px;
   position: relative;
+}
+
+.home-banner-background-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-banner-background-marquee {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.home-banner-background-marquee img {
+  width: 140px;
+  height: 172px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 12px;
+}
+
+.home-banner-background
+  .home-banner-background-wrapper:last-child
+  .home-banner-background-marquee {
+  animation: marqueeScroll 20s linear infinite reverse;
+}
+
+.home-banner-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .home-banner-container::before {
@@ -363,27 +391,18 @@ header nav a:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 200%;
-  height: 100%;
+  width: 250%;
+  height: 200%;
   background: #fff;
   filter: blur(65px);
   z-index: 1;
 }
 
-.home-banner-container-static {
+.home-banner-container-logo {
+  height: 100%;
   aspect-ratio: 83/140;
   object-fit: cover;
   z-index: 2;
-}
-
-.home-banner-container-moving {
-  position: absolute;
-  aspect-ratio: 31/32;
-  object-fit: cover;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 5%;
-  z-index: 3;
 }
 
 .home-marquee {
@@ -440,13 +459,76 @@ header nav a:hover {
   }
 }
 
+@keyframes marqueeReverseScroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.home-reality-wrapper {
+  min-height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .home-reality {
   display: flex;
-  width: 100%;
+
+  min-height: 100svh;
   padding: 80px 160px;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   gap: 64px;
+
+  /* ✅ animation */
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+
+  animation: realitySectionAnim linear forwards;
+  animation-timeline: view(10svh 10svh);
+}
+
+@keyframes realitySectionAnim {
+  0% {
+    transform: translateY(200px);
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateY(-50%);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(-50%);
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-200px);
+    clip-path: inset(0 20% 0 0);
+    opacity: 0;
+  }
+}
+
+.home-reality-container img,
+.home-reality-container p {
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
 .home-reality-container {
@@ -477,6 +559,7 @@ header nav a:hover {
   justify-content: center;
   flex-direction: column;
   gap: 64px;
+  padding: 80px 0px;
 }
 
 .home-parle .template-heading {
@@ -867,6 +950,25 @@ header nav a:hover {
   padding: 80px 0px 80px 160px;
 }
 
+.home-brands .template-heading h3 span {
+  animation: brandsHeading 10s ease-in-out infinite;
+}
+
+@keyframes brandsHeading {
+  0% {
+    color: #c3262b;
+  }
+  40% {
+    color: #ffffff;
+  }
+  60% {
+    color: #ffffff;
+  }
+  100% {
+    color: #c3262b;
+  }
+}
+
 .home-brands-left {
   width: 40%;
   display: flex;
@@ -992,6 +1094,7 @@ header nav a:hover {
 .template-heading h3 span {
   color: var(--Vermilion-Red, #c3262b);
   font-weight: 700;
+  transition: all 0.3s;
 }
 
 .template-heading svg {

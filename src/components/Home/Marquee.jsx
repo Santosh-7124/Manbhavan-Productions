@@ -19,6 +19,18 @@ function Marquee() {
           <img src={Parle} alt="Parle" />
           <img src={Limca} alt="Limca" />
           <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
+          <img src={Limca} alt="Limca" />
+          <img src={Parle} alt="Parle" />
         </div>
       </div>
       <div className="home-marquee-left"></div>
