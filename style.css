@@ -497,25 +497,25 @@ header nav a:hover {
 
 @keyframes realitySectionAnim {
   0% {
-    transform: translateY(50%);
+    transform: translateY(50%) scale(0.8);
     opacity: 0;
     filter: blur(20px);
   }
 
   20% {
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1);
     opacity: 1;
     filter: blur(0);
   }
 
   85% {
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1);
     opacity: 1;
     filter: blur(0);
   }
 
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-200px) scale(0.8);
     opacity: 0;
     filter: blur(20px);
   }
@@ -806,10 +806,9 @@ header nav a:hover {
   }
 }
 
-/* Wrapper gives scroll space */
 .home-parle-wrapper {
   width: 100%;
-  min-height: 100svh; /* 🔥 more scroll room */
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -835,25 +834,25 @@ header nav a:hover {
 
 @keyframes parleSectionAnim {
   0% {
-    transform: translateY(50svh);
+    transform: translateY(50svh) scale(0.8);
     opacity: 0;
     filter: blur(20px);
   }
 
   50% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
     filter: blur(0px);
   }
 
   80% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
     filter: blur(0px);
   }
 
   100% {
-    transform: translateY(-50svh);
+    transform: translateY(-50svh) scale(0.8);
     opacity: 0;
     filter: blur(20px);
   }
@@ -935,6 +934,16 @@ header nav a:hover {
   justify-content: center;
   gap: 80px;
   padding: 80px 160px;
+
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+
+  animation: realitySectionAnim linear forwards;
+  animation-timeline: view(10svh 10svh);
+  transition: all 0.3s;
 }
 
 .home-holi-img {
@@ -1049,6 +1058,14 @@ header nav a:hover {
   letter-spacing: -0.32px;
 }
 
+.home-impact-wrapper {
+  min-height: 200svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .home-impact {
   width: 100%;
   display: flex;
@@ -1057,6 +1074,16 @@ header nav a:hover {
   flex-direction: column;
   gap: 64px;
   padding: 80px 160px;
+
+  position: sticky;
+  top: 100%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+
+  animation: realitySectionAnim linear forwards;
+  animation-timeline: view(10svh 10svh);
+  transition: all 0.3s;
 }
 
 .home-impact .template-heading p {
@@ -1238,6 +1265,14 @@ header nav a:hover {
   transform: translateY(2px);
 }
 
+.home-brands-wrapper {
+  min-height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .home-brands {
   width: 100%;
   display: flex;
@@ -1245,6 +1280,16 @@ header nav a:hover {
   justify-content: flex-start;
   gap: 80px;
   padding: 80px 0px 80px 160px;
+
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+
+  animation: realitySectionAnim linear forwards;
+  animation-timeline: view(10svh 10svh);
+  transition: all 0.3s;
 }
 
 .home-brands .template-heading h3 span {
@@ -1415,13 +1460,6 @@ header nav a:hover {
   gap: 50svh;
   position: relative;
 }
-
-/* .home-services .template-heading {
-  position: sticky;
-  top: 0px;
-  background: #fff;
-  z-index: 1;
-} */
 
 .home-services-container {
   width: 100%;

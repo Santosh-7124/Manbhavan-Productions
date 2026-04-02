@@ -68,147 +68,149 @@ function Brands() {
   }, []);
 
   return (
-    <section className="home-brands" ref={testimonyRef}>
-      <div className="home-brands-left">
-        <div className="template-heading">
-          <h3 className="h3-semibold">
-            A Collection of Works Crafted for
-            <br />
-            <span>Brands.</span>
-          </h3>
-          <p className="m-regular">
-            Lorem ipsum dolor sit amet consectetur. Maecenas at quis vestibulum
-            diam hac consectetur eget.{" "}
-          </p>
-        </div>
-        <div className="home-brands-buttons">
-          <button
-            className="home-brands-button"
-            onClick={handlePrev}
-            style={{
-              opacity: isFirst ? 0.3 : 1,
-              cursor: isFirst ? "default" : "pointer",
-              pointerEvents: isFirst ? "none" : "auto",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              style={{ transform: "rotate(180deg)" }}
+    <section className="home-brands-wrapper">
+      <div className="home-brands" ref={testimonyRef}>
+        <div className="home-brands-left">
+          <div className="template-heading">
+            <h3 className="h3-semibold">
+              A Collection of Works Crafted for
+              <br />
+              <span>Brands.</span>
+            </h3>
+            <p className="m-regular">
+              Lorem ipsum dolor sit amet consectetur. Maecenas at quis
+              vestibulum diam hac consectetur eget.{" "}
+            </p>
+          </div>
+          <div className="home-brands-buttons">
+            <button
+              className="home-brands-button"
+              onClick={handlePrev}
+              style={{
+                opacity: isFirst ? 0.3 : 1,
+                cursor: isFirst ? "default" : "pointer",
+                pointerEvents: isFirst ? "none" : "auto",
+              }}
             >
-              <mask
-                id="mask0_252_2764"
-                style={{ maskType: "alpha" }}
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                style={{ transform: "rotate(180deg)" }}
               >
-                <rect
+                <mask
+                  id="mask0_252_2764"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
                   width="24"
                   height="24"
-                  transform="matrix(-1 0 0 1 24 0)"
-                  fill="#D9D9D9"
-                />
-              </mask>
-              <g mask="url(#mask0_252_2764)">
-                <path
-                  d="M16.175 13L10.575 18.6L12 20L20 12L12 4L10.575 5.4L16.175 11H4V13H16.175Z"
-                  fill="#1B1B1B"
-                />
-              </g>
-            </svg>
-          </button>
-          <button
-            className="home-brands-button"
-            onClick={handleNext}
-            style={{
-              opacity: isLast ? 0.3 : 1,
-              cursor: isLast ? "default" : "pointer",
-              pointerEvents: isLast ? "none" : "auto",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
+                >
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="matrix(-1 0 0 1 24 0)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_252_2764)">
+                  <path
+                    d="M16.175 13L10.575 18.6L12 20L20 12L12 4L10.575 5.4L16.175 11H4V13H16.175Z"
+                    fill="#1B1B1B"
+                  />
+                </g>
+              </svg>
+            </button>
+            <button
+              className="home-brands-button"
+              onClick={handleNext}
+              style={{
+                opacity: isLast ? 0.3 : 1,
+                cursor: isLast ? "default" : "pointer",
+                pointerEvents: isLast ? "none" : "auto",
+              }}
             >
-              <mask
-                id="mask0_252_2764"
-                style={{ maskType: "alpha" }}
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <rect
+                <mask
+                  id="mask0_252_2764"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
                   width="24"
                   height="24"
-                  transform="matrix(-1 0 0 1 24 0)"
-                  fill="#D9D9D9"
-                />
-              </mask>
-              <g mask="url(#mask0_252_2764)">
-                <path
-                  d="M16.175 13L10.575 18.6L12 20L20 12L12 4L10.575 5.4L16.175 11H4V13H16.175Z"
-                  fill="#1B1B1B"
-                />
-              </g>
-            </svg>
-          </button>
+                >
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="matrix(-1 0 0 1 24 0)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_252_2764)">
+                  <path
+                    d="M16.175 13L10.575 18.6L12 20L20 12L12 4L10.575 5.4L16.175 11H4V13H16.175Z"
+                    fill="#1B1B1B"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="home-brands-right" ref={containerRef}>
-        <div
-          className="home-brands-slide"
-          ref={slideRef}
-          style={{
-            transform: `translateX(${translateX}px)`,
-            transition: "transform 0.4s ease",
-          }}
-        >
-          <article className="home-brands-set">
-            <img src={Brand1} alt="" />
-            <p>
-              <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
-              ectetur. Maecenas at quis vestinsk
-            </p>
-          </article>
-          <article className="home-brands-set">
-            <img src={Brand2} alt="" />
-            <p>
-              <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
-              ectetur. Maecenas at quis vestinsk
-            </p>
-          </article>
-          <article className="home-brands-set">
-            <img src={Brand3} alt="" />
-            <p>
-              <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
-              ectetur. Maecenas at quis vestinsk
-            </p>
-          </article>
-          <article className="home-brands-set">
-            <img src={Brand1} alt="" />
-            <p>
-              <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
-              ectetur. Maecenas at quis vestinsk
-            </p>
-          </article>
-          <article className="home-brands-set">
-            <img src={Brand2} alt="" />
-            <p>
-              <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
-              ectetur. Maecenas at quis vestinsk
-            </p>
-          </article>
+        <div className="home-brands-right" ref={containerRef}>
+          <div
+            className="home-brands-slide"
+            ref={slideRef}
+            style={{
+              transform: `translateX(${translateX}px)`,
+              transition: "transform 0.4s ease",
+            }}
+          >
+            <article className="home-brands-set">
+              <img src={Brand1} alt="" />
+              <p>
+                <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
+                ectetur. Maecenas at quis vestinsk
+              </p>
+            </article>
+            <article className="home-brands-set">
+              <img src={Brand2} alt="" />
+              <p>
+                <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
+                ectetur. Maecenas at quis vestinsk
+              </p>
+            </article>
+            <article className="home-brands-set">
+              <img src={Brand3} alt="" />
+              <p>
+                <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
+                ectetur. Maecenas at quis vestinsk
+              </p>
+            </article>
+            <article className="home-brands-set">
+              <img src={Brand1} alt="" />
+              <p>
+                <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
+                ectetur. Maecenas at quis vestinsk
+              </p>
+            </article>
+            <article className="home-brands-set">
+              <img src={Brand2} alt="" />
+              <p>
+                <span>Parle Diwali Campaign</span> dolor sit amet conskdoisk
+                ectetur. Maecenas at quis vestinsk
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>

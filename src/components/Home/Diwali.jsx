@@ -3,7 +3,7 @@ import DiwaliImage from "../../assets/Home/Diwali/Diwali Image.png";
 
 function Diwali() {
   return (
-    <section className="home-diwali-wrapper">
+    <section className="home-brands-wrapper">
       <div className="home-holi home-diwali">
         <div className="home-holi-img">
           <img src={DiwaliImage} alt="Holi Image" />
